@@ -23,19 +23,24 @@ if (enableWatchMode) {
 
 function generate(paths) {
     var errors = [];
-    var componentData = getDirectories(paths.components).map(function(componentName) {
+    var componentName = "GithubCalender";
+   // console.log(paths);
+    //var componentData = getFiles(paths.components);
+    console.log("finall");
+    console.log(componentData);
         try {
-            return getComponentData(paths, componentName)
+            var componentData = getComponentData(paths, "GithubCalender")
         } catch(error) {
             errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
         }
-    });
+
     writeFile(paths.output, "module.exports = " + JSON.stringify(errors.length ? errors : componentData));
 }
 
 function getComponentData(paths, componentName) {
-    var content = readFile(path.join(paths.components, componentName, componentName + '.js'));
+    var content = readFile(path.join(paths.components, componentName + '.js'));
     var info = parse(content);
+    //console.log("component data");
     return {
         name: componentName,
         description: info.description,
@@ -46,9 +51,10 @@ function getComponentData(paths, componentName) {
 }
 
 function getExampleData(examplesPath, componentName) {
+    console.log("example data");
     var examples = getExampleFiles(examplesPath, componentName);
     return examples.map(function(file) {
-        var filePath = path.join(examplesPath, componentName, file)
+        var filePath = path.join(examplesPath, file)
         var content = readFile(filePath)
         var info = parse(content);
         return {
@@ -64,7 +70,7 @@ function getExampleData(examplesPath, componentName) {
 function getExampleFiles(examplesPath, componentName) {
     var exampleFiles = [];
     try {
-        exampleFiles = getFiles(path.join(examplesPath, componentName));
+        exampleFiles = getFiles(path.join(examplesPath));
     } catch(error) {
         console.log(chalk.red(`No examples found for ${componentName}.`));
     }
@@ -84,6 +90,7 @@ function getFiles(filepath) {
 }
 
 function writeFile(filepath, content) {
+    console.log("write filr");
     fs.writeFile(filepath, content, function (err) {
         err ? console.log(chalk.red(err)) : console.log(chalk.green("Component data saved."));
     });
