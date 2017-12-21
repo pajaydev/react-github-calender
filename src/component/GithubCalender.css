@@ -1,15 +1,5 @@
 /* CSS obtained from GitHub */
 
-.calendar {
-    width: 750px;
-    font-family: Helvetica, arial;
-    border: 1px solid #DDDDDD;
-    border-radius: 3px;
-    min-height: 243px;
-    text-align: center;
-    margin: 0 auto;
-}
-
 .calendar-graph text.wday,
 .calendar-graph text.month {
     font-size: 10px;
@@ -36,6 +26,16 @@
     display: inline-block;
     width: 10px;
     height: 10px;
+}
+
+.github-calendar {
+    width: 750px;
+    font-family: Helvetica, arial;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    min-height: 243px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .text-small {
