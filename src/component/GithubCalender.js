@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './GithubCalender.css';
+
+
 class GithubCalender extends Component{
 
-
-
-
     createGithubCalender(body){
-        console.log("inside github calender");
         let div = document.createElement("div");
         div.innerHTML = body;
         let cal = div.querySelector(".js-contribution-graph");
@@ -37,6 +35,14 @@ class GithubCalender extends Component{
         )
     }
 
+}
+
+
+GithubCalender.propTypes = {
+    /** send me Github user name */
+     username : PropTypes.string.isRequired,
+    /** insert custom text */
+     text: PropTypes.string
 }
 
 export default GithubCalender;
