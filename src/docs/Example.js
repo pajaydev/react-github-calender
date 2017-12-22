@@ -5,8 +5,6 @@ import CodeRefractor from './CodeRefractor';
 class Example extends React.Component {
     constructor(props) {
         super(props);
-        console.log("inside example");
-        console.log(this.props);
         this.state = {
             showCode: false
         };
@@ -22,7 +20,7 @@ class Example extends React.Component {
     render() {
         const {name, code, description} = this.props.example;
         const {showCode} = this.state;
-        const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default;
+        const ExampleComponent = require(`./example/${name}`).default;
         return (
             <div className="example-wrapper">
                 <p>
