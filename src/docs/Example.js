@@ -28,9 +28,10 @@ class Example extends React.Component {
                 </p>
 
                 <ExampleComponent />
-                <a href="#" onClick={this.toggleCode.bind(this)}>
-                    {showCode ? "Hide" : "Show"} Code</a>
-                {showCode && <CodeRefractor>{code}</CodeRefractor>}
+                <div className="show-code">
+                <a  href="#" onClick={this.toggleCode.bind(this)}>
+                    {showCode ? "Hide" : "Show"} Code</a></div>
+                    {showCode && <CodeRefractor>{code}</CodeRefractor>}
             </div>
         )
     }

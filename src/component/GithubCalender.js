@@ -10,7 +10,8 @@ class GithubCalender extends Component{
         div.innerHTML = body;
         let cal = div.querySelector(".js-contribution-graph");
         let hyperlink = "<a href='http://github.com/'+this.props.username>"+this.props.username+"</a>";
-        cal.querySelector(".float-left.text-gray").innerHTML = this.props.text || "Contributed by "+hyperlink;
+        let text = this.props.text || "Contributed by ";
+        cal.querySelector(".float-left.text-gray").innerHTML = text+" "+hyperlink;
         document.getElementById('react-github-id').innerHTML = cal.innerHTML;
 
     }
@@ -23,7 +24,6 @@ class GithubCalender extends Component{
             console.log("success");
             return response.text()
         }).then(body => {
-            console.log("body"+body);
             this.createGithubCalender(body);
         }).catch(e => console.error(e));
         fetchCalendar();
@@ -39,10 +39,14 @@ class GithubCalender extends Component{
 
 
 GithubCalender.propTypes = {
-    /** send me Github user name */
+    /** Github user name */
      username : PropTypes.string.isRequired,
-    /** insert custom text */
+    /** custom text to display */
      text: PropTypes.string
 }
+
+GithubCalender.defaultProps = {
+    text: "All commits done by"
+};
 
 export default GithubCalender;
