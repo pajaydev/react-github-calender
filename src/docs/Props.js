@@ -5,7 +5,7 @@ const Props = ({props}) => {
 
 
     return (
-        <table className="props">
+        <table className="props table table-striped">
             <thead>
             <tr>
                 <th>Name</th>
