@@ -21,7 +21,7 @@ class GithubCalender extends Component{
     componentDidMount(){
         //proxy for cors
         let fetchCalendar = () => fetch("https://urlreq.appspot.com/req?method=GET&url=https://github.com/" + this.props.username).then(response => {
-            console.log("success");
+           // console.log("success");
             return response.text()
         }).then(body => {
             this.createGithubCalender(body);
