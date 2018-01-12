@@ -65,6 +65,9 @@
     "build:css": "cpx \"./src/component/*.css\" ./lib",
     "prepublish": "npm run build:lib"
   },
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "components",
     "react",
