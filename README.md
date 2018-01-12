@@ -13,8 +13,10 @@ npm install --save github-calendar
 yarn add github-calendar
 ```
 
-## :memo: Documentation
-### `GitHubCalendar(container, username, options)`
+[![](https://github.com/ajay2507/react-github-calender/blob/master/Github_screenshot.png)](https://github.com/ajay2507/react-github-calender)
+
+## Documentation
+### `ReactGithubCalender`
 Include the Github Calender into your React App.
 
 #### Props
