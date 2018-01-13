@@ -9,15 +9,12 @@ class App extends Component{
     render(){
         return(
             <div>
-                <GithubCorner
-                    href={"https://github.com/ajay2507/react-github-calender"}
-                    bannerColor="#151513"
-                    octoColor="#fff"
-                    size={80}
-                    direction="right"
-                />
+
                 <Header />
                 <ComponentData component={componentData} />
+                <GithubCorner
+                    href={"https://github.com/ajay2507/react-github-calender"}
+                />
             </div>
         )
     }
