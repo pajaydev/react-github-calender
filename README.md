@@ -1,4 +1,6 @@
 
+[![npm version](https://badge.fury.io/js/react-github-contribution-calendar.svg)](https://react-github-calender.netlify.com/)
+
 # React Github Calender
 
 In commonJS environment, you can install react-github-calender using below commands
