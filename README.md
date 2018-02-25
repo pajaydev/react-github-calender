@@ -1,6 +1,6 @@
 
 [![npm version](https://badge.fury.io/js/react-github-contribution-calendar.svg)](https://react-github-calender.netlify.com/)
-[![Up to date Status](https://travis-ci.org/ajay2507/react-github-calender.svg?branch=master)](https://travis-ci.org/ajay2507/react-github-calenderh)
+[![Up to date Status](https://travis-ci.org/ajay2507/react-github-calender.svg?branch=master)](https://travis-ci.org/ajay2507/react-github-calender)
 
 # React Github Calender
 
